@@ -4,7 +4,8 @@ namespace App\Repositories;
 
 use App\Models\Tag;
 
-class TagRepository {
+class TagRepository
+{
 
     protected Tag $tag;
 
@@ -33,7 +34,7 @@ class TagRepository {
         return $tag->update($data);
     }
 
-    public function deleteTag(Tag $tag) 
+    public function deleteTag(Tag $tag)
     {
         return $tag->delete();
     }

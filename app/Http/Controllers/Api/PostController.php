@@ -3,24 +3,16 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Services\TagService;
 use Illuminate\Http\Request;
 
-class TagController extends Controller
+class PostController extends Controller
 {
-    protected TagService $tagService;
-
-    public function __construct(TagService $tagService)
-    {
-        $this->tagService = $tagService;
-    }
-
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return $this->tagService->getTags($numberPage = 10);
+        //
     }
 
     /**
@@ -36,7 +28,7 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
-        return $this->tagService->createTag($request);
+        //
     }
 
     /**
@@ -44,7 +36,7 @@ class TagController extends Controller
      */
     public function show(string $id)
     {
-        return $this->tagService->getTagById($id);
+        //
     }
 
     /**
@@ -60,7 +52,7 @@ class TagController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        return $this->tagService->updateTag($request, $id);
+        //
     }
 
     /**
@@ -68,6 +60,6 @@ class TagController extends Controller
      */
     public function destroy(string $id)
     {
-        return $this->tagService->deleteTagById($id);
+        //
     }
 }

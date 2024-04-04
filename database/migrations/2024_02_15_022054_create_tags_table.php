@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('tags', function (Blueprint $table) {
             $table->id();
+            $table->string('slug')->unique();
+            $table->string('name')->unique();
+            $table->text('image_url')->nullable();
             $table->timestamps();
         });
     }
